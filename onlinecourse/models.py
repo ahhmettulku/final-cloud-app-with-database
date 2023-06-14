@@ -132,7 +132,7 @@ class Question(models.Model):
 class Choice(models.Model):
     # one-to-many relationship with Question
     question = models.ManyToManyField(Question)
-    choice = models.CharField(max_length=500)
+    choice_text = models.CharField(max_length=500)
     is_correct = models.BooleanField(default=False)
 
 #   <HINT> The submission model
